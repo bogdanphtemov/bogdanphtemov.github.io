@@ -1,0 +1,498 @@
+/* ==========================================
+   LINUXOIDBOGDAN — Minimal Monochrome
+   ========================================== */
+
+/* ---------- Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Base ---------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #e5e5e5;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.hero h1 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #e5e5e5;
+}
+
+.hero .username {
+    font-family: ui-monospace, 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 1.05rem;
+    color: #a3a3a3;
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero .username::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #e63946;
+    border-radius: 50%;
+}
+
+.hero .tagline {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    color: #a3a3a3;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* ---------- Navigation ---------- */
+.hero nav {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+}
+
+.hero nav a {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-weight: 400;
+    font-size: 0.95rem;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-bottom-color 0.2s;
+}
+
+.hero nav a:hover {
+    color: #e5e5e5;
+    border-bottom-color: #e63946;
+}
+
+/* ---------- Sections ---------- */
+.section {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+    color: #e5e5e5;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 36px;
+    height: 2px;
+    background-color: #e63946;
+    border-radius: 2px;
+}
+
+.section p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    max-width: 700px;
+    color: #d0d0d0;
+}
+
+/* ---------- Tools Category Headers ---------- */
+.tools-category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 44px;
+    margin-bottom: 16px;
+    color: #a3a3a3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tools-category:first-of-type {
+    margin-top: 0;
+}
+
+/* ---------- Tools Grid ---------- */
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.tool-card {
+    background-color: #111111;
+    border: 1px solid #1f1f1f;
+    border-radius: 8px;
+    padding: 18px 16px;
+    width: 170px;
+    text-align: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tool-card:hover {
+    background-color: #161616;
+    border-color: #2a2a2a;
+}
+
+.tool-card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: brightness(0.9);
+    transition: filter 0.2s;
+}
+
+.tool-card:hover img {
+    filter: brightness(1.1);
+}
+
+.tool-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #e5e5e5;
+}
+
+.tool-card p {
+    font-size: 0.8rem;
+    color: #a3a3a3;
+    margin-bottom: 0;
+    max-width: none;
+}
+
+/* ---------- Project Cards ---------- */
+.project-card {
+    background-color: #111111;
+    border: 1px solid #1f1f1f;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+    background-color: #161616;
+    border-color: #2a2a2a;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #1f1f1f;
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.project-card h3 .project-title {
+    text-decoration: none;
+    color: #4da6ff;
+    font-weight: 500;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+}
+
+.project-card h3 .project-title:hover {
+    color: #7fc4ff;
+    border-bottom-color: #4da6ff;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #a3a3a3;
+    margin-bottom: 16px;
+}
+
+.project-links {
+    display: flex;
+    gap: 18px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-bottom-color 0.2s;
+}
+
+.project-links a:hover {
+    color: #e5e5e5;
+    border-bottom-color: #e63946;
+}
+
+/* ---------- Project Details (expandable) ---------- */
+.project-details {
+    margin-top: 20px;
+    border-top: 1px solid #1f1f1f;
+    padding-top: 16px;
+}
+
+.project-toggle {
+    cursor: pointer;
+    color: #a3a3a3;
+    font-size: 0.9rem;
+    outline: none;
+    list-style: none;
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.project-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.project-toggle:hover {
+    color: #e63946;
+}
+
+.project-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.project-video {
+    width: 100%;
+    max-width: 640px;
+    border-radius: 6px;
+    border: 1px solid #1f1f1f;
+    background: #000;
+    display: block;
+}
+
+.video-caption {
+    font-size: 0.8rem;
+    color: #a3a3a3;
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+/* ---------- Glory to Ukraine ---------- */
+.glory {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e5e5e5;
+    margin-top: 28px;
+    letter-spacing: 1px;
+}
+
+/* ---------- Contact ---------- */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-weight: 400;
+    padding: 16px 22px 14px;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    min-width: 160px;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s, background-color 0.25s;
+    cursor: default;
+}
+
+a.contact-card {
+    cursor: pointer;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border-color: #e63946;
+    background-color: #111111;
+}
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: filter 0.2s;
+}
+
+.contact-card:hover .contact-icon {
+    filter: brightness(1.2);
+}
+
+.contact-label {
+    font-weight: 600;
+    color: #e5e5e5;
+    font-size: 0.95rem;
+}
+
+.contact-value {
+    font-size: 0.8rem;
+    color: #a3a3a3;
+    font-family: ui-monospace, 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #0a0a0a;
+    border-top: 1px solid #1f1f1f;
+    color: #a3a3a3;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   Responsive — Mobile (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+
+    /* ---------- Hero ---------- */
+    .hero {
+        padding: 60px 16px 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .hero .tagline {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .hero nav {
+        gap: 8px 18px;
+    }
+
+    /* ---------- Sections ---------- */
+    .section {
+        padding: 48px 16px;
+    }
+
+    .section h2 {
+        font-size: 1.35rem;
+    }
+
+    /* ---------- Tools ---------- */
+    .tools-grid {
+        gap: 8px;
+    }
+
+    .tool-card {
+        width: calc(50% - 4px);
+        min-width: 130px;
+        padding: 14px 10px;
+    }
+
+    .tool-card img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .tool-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .tool-card p {
+        font-size: 0.75rem;
+    }
+
+    /* ---------- Projects ---------- */
+    .project-card {
+        padding: 18px;
+    }
+
+    .project-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-video {
+        max-width: 100%;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-card {
+        flex: 1 1 calc(50% - 7px);
+        min-width: 0;
+        padding: 12px 14px 10px;
+    }
+
+    .contact-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-label {
+        font-size: 0.85rem;
+    }
+
+    .contact-value {
+        font-size: 0.7rem;
+    }
+
+    /* ---------- Disable hover animations on touch devices ---------- */
+    .tool-card:hover {
+        transform: none;
+    }
+
+    a.contact-card:hover {
+        transform: none;
+    }
+}
